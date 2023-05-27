@@ -18,13 +18,13 @@ public class Reservation {
     //Car
     @ManyToOne
     @JoinColumn(name="carId")
-    @JsonIgnoreProperties("reservation")
+    @JsonIgnoreProperties("reservations")
     private Car car;
 
     //Client
     @ManyToOne
     @JoinColumn(name="clientId")
-    @JsonIgnoreProperties({"reservation", "messages"})
+    @JsonIgnoreProperties({"reservations", "messages"})
     private Client client;
 
     //Score
