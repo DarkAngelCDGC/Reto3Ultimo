@@ -66,7 +66,7 @@ public class CarService {
 
     }
 
-    public boolean deleteCar(int id){
+    public boolean delete(int id){
         Boolean respuesta = getCar(id).map(car -> {
             carRepository.delete(car);
             return true;
@@ -74,4 +74,6 @@ public class CarService {
 
         return respuesta;
     }
+
+
 }
